@@ -37,12 +37,12 @@ packname="imei-imagemagick"
 packname_vers=$(find repo -name "${packname}_*.deb" | tail -n 1 | sed -e 's@.*/@@' -e 's@\.deb@@' )
 
 cat <<EOF > repo/index.html
-<body style="margin: 20px 50px;">
+<body style="margin: 20px 50px; font-family: sans">
 <H2>Ubuntu packages for $packname_vers</H2>
 
 Run the following shell commands to add the repository and install from there:
 
-<pre>
+<pre style="background: #eee">
 echo "deb [allow-insecure=yes trusted=yes] $baseurl/\$(. /etc/os-release; echo \$UBUNTU_CODENAME)/ /" | sudo tee /etc/apt/sources.list.d/$packname.list
 sudo apt update
 sudo apt install $packname
@@ -50,7 +50,7 @@ sudo apt install $packname
 
 <p>
 <br>
-<hr>
+<hr style="color: #fff">
 <p>
 <br>
 <small>
