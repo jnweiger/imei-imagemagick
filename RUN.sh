@@ -62,3 +62,5 @@ for dir in $(cd repo; ls -d ubuntu-*); do
   echo >> repo/index.html "<a href=\"$dir\">$dir</a><br>"
 done
 echo >> repo/index.html "<p><br/><p style=\"text-align: right\">$(date --rfc-3339=seconds)</p>"
+
+echo -e "\nNow try:\n\t firefox $baseurl\n"
